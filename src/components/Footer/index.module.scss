@@ -1,3 +1,92 @@
 @import "styles/palatte.scss";
 @import "styles/mixins.scss";
 @import "styles/variables.scss";
+
+.footer {
+    background: $blackBlue;
+    padding: 61px 115px 29px 91px;
+
+    &__container {
+        @include d-flex(null, space-between, center);
+        max-width: 1054px;
+    }
+
+    &__contacts {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 13px;
+        margin-left: 22px;
+        color: #ffffff;
+    }
+
+    &__link {
+        color: #ffffff;
+        margin-bottom: 17px;
+        font-size: $default-size;
+        cursor: pointer;
+    }
+
+    &__privacy {
+        color: rgba(255, 255, 255, 0.65);
+    }
+
+    &__block {
+        @include d-flex(null, space-between, center);
+        max-width: 1217px;
+        margin-left: 22px;
+    }
+
+    &__logo {
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        @include d-flex(null, space-between, center);
+        gap: 50px;
+    }
+
+    &__icons {
+        @include d-flex(null, null, center);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 949px) {
+    .footer {
+        padding: 61px 28px 29px 28px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .footer {
+        padding: 61px 28px 29px 28px;
+
+        &__links {
+            display: none;
+        }
+
+        &__block {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: unset;
+            align-items: unset;
+        }
+
+        &__text {
+            @include d-flex(null, unset, center);
+        }
+
+        &__privacy {
+            font-size: 12px;
+        }
+
+        &__icons {
+            margin: 39px 0 52px 0;
+        }
+
+        &__contacts {
+            color: rgba(255, 255, 255, 0.65);
+            font-size: $dekstop-small;
+        }
+    }
+}

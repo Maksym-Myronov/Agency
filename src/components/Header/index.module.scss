@@ -87,6 +87,10 @@
                 line-height: 16px;
             }
         }
+
+        &__catalog {
+            display: none;
+        }
     }
 
     .burger {
@@ -96,9 +100,10 @@
     .header__links_open {
         display: block;
         position: absolute;
-        top: 50px;
         left: 0;
-        padding: 0 40px;
+        padding: 50px 40px 0 40px;
+        background: white;
+        width: 100%;
 
         &__link {
             display: block;
@@ -125,9 +130,6 @@
 @media screen and (max-width: 949px) {
     .header {
         margin: 10px 15px 0 7px;
-        &__catalog {
-            display: none;
-        }
 
         &__link {
             font-size: $dekstop-size;

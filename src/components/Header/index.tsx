@@ -15,7 +15,7 @@ export const Header: React.FC = () => {
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
     return (
-        <div className={s.header}>
+        <header className={s.header}>
             <img src={logo} alt="logo" className={s.header__logo} />
             <img
                 src={mobileLogo}
@@ -77,6 +77,6 @@ export const Header: React.FC = () => {
                 ></span>
             </div>
             <img src={catalog} alt="catalog" className={s.header__catalog} />
-        </div>
+        </header>
     );
 };
